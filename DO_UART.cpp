@@ -3,7 +3,6 @@
 int BAUD_RATE = 9600;
 String cmdData="";
 String cmd[3]="";
-String doData = "15.56";
 boolean cmd_complete=false;
 boolean cont_read_mode = false;
 int read_rate =1;
@@ -18,7 +17,7 @@ void setup() {
 
 void Read(){
   char buf[20];
-  sprintf(buf, "%d.%d\r", 5,56);
+  sprintf(buf, "%d.%d\r", 15,56);
   Serial.print(buf);
 }
 

@@ -32,11 +32,15 @@ void requestEvent() {
 
   switch (CMD) {
     case READ: 
-      sprintf(buffer, "%c%d.%d\n", code, value1, value2);
+      sprintf(buffer, "%c%d.%d\0", code, value1, value2);
       break;
   
     case I2C: 
-      sprintf(buffer, "%c%d\n", code,ADDR);
+      sprintf(buffer, "%c%d\0", code,ADDR);
+      break;
+
+    case CAL:
+      sprintf(buffer, "%c\0", code);
       break;
   }
 
